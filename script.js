@@ -6,7 +6,8 @@ sendApiRequest()
 async function sendApiRequest(){
 let APP_ID ="3e255b03"
 let API_KEY="650d630b1f2dcb74b69319df738a61b3"
-let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=pizza`);
+let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&
+r=http%3A%2F%2Fwww.edamam.com%2Fontologies%2Fedamam.owl%23recipe_9b5945e03f05acbf9d69625138385408`);
 console.log(response)
 let data = await response.json()
 console.log(data)
