@@ -1,13 +1,13 @@
 let searchButton = document.querySelector("#search")
-searchButton.addEventListener("click",()=>{ 
+searchButton.addEventListener('click',()=>{ 
 console.log("button pressed")
 sendApiRequest()
-})
+});
 async function sendApiRequest(){
 let APP_ID ="3e255b03"
 let API_KEY="650d630b1f2dcb74b69319df738a61b3"
 let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=pizza`);
-console.log(Response)
+console.log(response)
 let data = await response.json()
 console.log(data)
 useApiData(data)
